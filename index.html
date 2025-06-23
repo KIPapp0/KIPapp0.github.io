@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIP App - Kid's Interactive Programming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Space Background -->
+    <div class="space-background">
+        <div class="space-gradient"></div>
+        <div class="floating-star star-1"></div>
+        <div class="floating-star star-2"></div>
+        <div class="floating-star star-3"></div>
+        <div class="floating-star star-4"></div>
+        <div class="floating-star star-5"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <img src="./images/icon.png" alt="KIP App">
+                </div>
+                <span class="nav-title">KIP.app</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-menu desktop-menu">
+                <button onclick="scrollToSection('inicio')" class="nav-link">Inicio</button>
+                <button onclick="scrollToSection('sobre-nosotros')" class="nav-link">Sobre Nosotros</button>
+                <button onclick="scrollToSection('descargas')" class="nav-link">Descargas</button>
+                <button onclick="scrollToSection('manual')" class="nav-link">Manual</button>
+                <button onclick="scrollToSection('descargas')" class="btn btn-primary">Descargar App</button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="mobile-menu-btn">
+                <button id="mobile-toggle" class="btn-icon">
+                    <svg id="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" style="display: none;">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-content">
+                <button onclick="scrollToSection('inicio')" class="mobile-nav-link">Inicio</button>
+                <button onclick="scrollToSection('sobre-nosotros')" class="mobile-nav-link">Sobre Nosotros</button>
+                <button onclick="scrollToSection('descargas')" class="mobile-nav-link">Descargas</button>
+                <button onclick="scrollToSection('manual')" class="mobile-nav-link">Manual</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <div class="icon-cube">
+                        <img src="./images/icon.png" alt="KIP App">
+                    </div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line-1">Kid's Interactive</span>
+                    <br>
+                    <span class="title-line-2">Programming</span>
+                </h1>
+                <p class="hero-description">
+                    Aprende programación de forma divertida e interactiva. Una herramienta educativa diseñada
+                    especialmente
+                    para estudiantes del sector rural.
+                </p>
+                <div class="hero-buttons">
+                    <button onclick="scrollToSection('descargas')" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7,10 12,15 17,10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Descargar Ahora
+                    </button>
+                    <button onclick="scrollToSection('sobre-nosotros')" class="btn btn-outline btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                        Conocer Más
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explora la Experiencia</h2>
+                <p class="section-description">Descubre las diferentes pantallas y funcionalidades de KIP App</p>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <div class="card-image">
+                        <img src="./images/kip-login.png" alt="Pantalla de Login KIP App">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Inicio de Sesión</h3>
+                        <p class="card-description">Interfaz intuitiva para acceder a tu cuenta</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="card-image">
+                        <img src="./images/kip-game.png" alt="Interfaz de Juego KIP App">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Planetas de Aprendizaje</h3>
+                        <p class="card-description">Explora diferentes mundos mientras aprendes</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="card-image">
+                        <img src="./images/kip-profile.png" alt="Perfil de Usuario KIP App">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Perfil Personalizable</h3>
+                        <p class="card-description">Personaliza tu experiencia de aprendizaje</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <p class="section-description">
+                    KIP App nace como una solución innovadora para combatir el analfabetismo digital en el sector rural,
+                    proporcionando herramientas educativas accesibles y entretenidas.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="about-subtitle">Nuestra Misión</h3>
+                    <p class="about-description">
+                        Facilitar el aprendizaje de conceptos básicos de programación para estudiantes del sector rural
+                        mediante
+                        una herramienta interactiva, comprensible y entretenida que promueva el desarrollo tecnológico
+                        en sus
+                        comunidades.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                            <span>Aprendizaje Progresivo</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>Enfoque Rural</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <span>Gamificación</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                            </svg>
+                            <span>Sistema de Recompensas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="info-card">
+                        <div class="card-header">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                                </path>
+                                <path
+                                    d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                                </path>
+                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                            </svg>
+                            <h4>Innovación Educativa</h4>
+                        </div>
+                        <p>Utilizamos metodologías interactivas y gamificación para hacer el aprendizaje de programación
+                            más atractivo y efectivo.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-header">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                            <h4>Impacto Social</h4>
+                        </div>
+                        <p>Contribuimos a reducir la brecha digital en zonas rurales, abriendo nuevas oportunidades de
+                            desarrollo profesional y comunitario.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <h3 class="team-title">Nuestro Equipo</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4>Josué David Díaz Flórez</h4>
+                        <p>Desarrollador</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4>Andrés Sebastián Mejía Pinzón</h4>
+                        <p>Desarrollador</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4>Angela Paola Orihuela Beltrán</h4>
+                        <p>Desarrollador</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4>Alejandro Ascanio Vera</h4>
+                        <p>Desarrollador</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4>Diego Andrés Gómez Gallego</h4>
+                        <p>Desarrollador</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4>Milton Andrés Guillen</h4>
+                        <p>Desarrollador</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Institution -->
+            <div class="institution-info">
+                <div class="badge">SENA - Ficha 2825962</div>
+                <p>Servicio Nacional de Aprendizaje - Centro de Formación para el Desarrollo Rural y Minero</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="descargas" class="downloads-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Descargar KIP App</h2>
+                <p class="section-description">
+                    Proximamente disponible para más plataformas.
+                </p>
+            </div>
+
+            <div class="downloads-grid">
+                <!-- Desktop Version -->
+                <div class="download-card desktop-card">
+                    <div class="download-header">
+                        <div class="download-icon desktop-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Versión Escritorio</h3>
+                        <p>Para Windows, macOS y Linux</p>
+                    </div>
+                    <div class="download-content">
+                        <div class="download-features">
+                            <p><strong>Características:</strong></p>
+                            <ul>
+                                <li>• Experiencia completa de escritorio</li>
+                                <li>• Mejor rendimiento gráfico</li>
+                                <li>• Pantalla completa disponible</li>
+                                <li>• Funciona sin conexión</li>
+                            </ul>
+                        </div>
+                        <div class="download-requirements">
+                            <p><strong>Requisitos mínimos:</strong></p>
+                            <ul>
+                                <li>• Windows 10+ / macOS 10.14+ / Ubuntu 18.04+</li>
+                                <li>• 4GB RAM</li>
+                                <li>• 500MB espacio libre</li>
+                            </ul>
+                        </div>
+
+                        <!-- Botones de descarga específicos por plataforma -->
+                        <div class="platform-downloads">
+                            <button onclick="downloadDesktop('windows')" class="btn btn-primary btn-full">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Descargar para Windows
+                            </button>
+                            <!-- <button onclick="downloadDesktop('mac')" class="btn btn-outline btn-full">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Descargar para macOS
+                            </button>
+                            <button onclick="downloadDesktop('linux')" class="btn btn-outline btn-full">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Descargar para Linux
+                            </button> -->
+                        </div>
+
+                        <p class="download-version">Versión 1.0.0 • <span id="desktop-status">Disponible</span></p>
+                    </div>
+                </div>
+
+                <!-- Mobile Version -->
+                <div class="download-card mobile-card">
+                    <div class="download-header">
+                        <div class="download-icon mobile-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3>Versión Móvil</h3>
+                        <p>Para Android e iOS</p>
+                    </div>
+                    <div class="download-content">
+                        <div class="download-features">
+                            <p><strong>Características:</strong></p>
+                            <ul>
+                                <li>• Aprende en cualquier lugar</li>
+                                <li>• Interfaz táctil optimizada</li>
+                                <li>• Sincronización en la nube</li>
+                                <li>• Notificaciones de progreso</li>
+                            </ul>
+                        </div>
+                        <div class="download-requirements">
+                            <p><strong>Requisitos mínimos:</strong></p>
+                            <ul>
+                                <li>• Android 8.0+ / iOS 12.0+</li>
+                                <li>• 2GB RAM</li>
+                                <li>• 200MB espacio libre</li>
+                            </ul>
+                        </div>
+
+                        <!-- Botones para tiendas móviles -->
+                        <div class="mobile-downloads">
+                            <!-- <button onclick="downloadMobile('android')" class="btn btn-secondary btn-full" >
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Descargar APK Android
+                            </button> -->
+                            <!-- <button onclick="downloadMobile('ios')" class="btn btn-outline btn-full">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg>
+                                Ver en App Store
+                            </button> -->
+                        </div>
+
+                        <p class="download-version">Versión 0.5.0 • <span id="mobile-status">Disponible</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Instructions -->
+            <div class="installation-guide">
+                <div class="guide-card">
+                    <h3>Instrucciones de Instalación</h3>
+                    <div class="guide-content">
+                        <div class="guide-section">
+                            <h4>Versión Escritorio:</h4>
+                            <ol>
+                                <li>Descarga el archivo ejecutable desde el botón de arriba</li>
+                                <li>Ejecuta el archivo descargado con doble clic</li>
+                                <li>Si aparece una advertencia de Windows, haz clic en "Más información" y luego
+                                    "Ejecutar de todos modos"</li>
+                                <li>Sigue las instrucciones del instalador</li>
+                                <li>¡Listo! La aplicación se ejecutará automáticamente</li>
+                            </ol>
+                        </div>
+                        <div class="guide-section">
+                            <h4>Versión Móvil:</h4>
+                            <ol>
+                                <li><strong>Android:</strong> Descarga el APK y permite instalación de fuentes
+                                    desconocidas</li>
+                                <li><strong>iOS:</strong> Busca "KIP App" en App Store o usa el enlace directo</li>
+                                <li>Toca el botón "Instalar" o "Obtener"</li>
+                                <li>Espera a que se complete la descarga e instalación</li>
+                                <li>¡Comienza tu aventura de aprendizaje!</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Manual Section -->
+    <section id="manual" class="manual-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Manual de Usuario</h2>
+                <p class="section-description">Guía completa para aprovechar al máximo KIP App</p>
+            </div>
+
+            <div class="manual-content">
+                <!-- Manual Navigation -->
+                <div class="manual-nav">
+                    <div class="manual-nav-card">
+                        <h3>Contenido del Manual</h3>
+                        <div class="manual-nav-list">
+                            <button onclick="showManualSection('primeros-pasos')" class="manual-nav-item active">1.
+                                Primeros Pasos</button>
+                            <button onclick="showManualSection('registro')" class="manual-nav-item">2. Registro e Inicio
+                                de Sesión</button>
+                            <button onclick="showManualSection('navegacion')" class="manual-nav-item">3. Navegación
+                                Principal</button>
+                            <button onclick="showManualSection('planetas')" class="manual-nav-item">4. Planetas de
+                                Aprendizaje</button>
+                            <button onclick="showManualSection('misiones')" class="manual-nav-item">5. Sistema de
+                                Misiones</button>
+                            <button onclick="showManualSection('juegos')" class="manual-nav-item">6. Juegos
+                                Educativos</button>
+                            <button onclick="showManualSection('tienda')" class="manual-nav-item">7. Tienda
+                                Virtual</button>
+                            <button onclick="showManualSection('glosario')" class="manual-nav-item">8. Glosario</button>
+                            <button onclick="showManualSection('configuracion')" class="manual-nav-item">9.
+                                Configuración</button>
+                            <button onclick="showManualSection('perfil')" class="manual-nav-item">10. Perfil de
+                                Usuario</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Content -->
+                <div class="manual-sections">
+                    <!-- Getting Started -->
+                    <div id="primeros-pasos" class="manual-section-content active">
+                        <div class="manual-card">
+                            <div class="manual-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                                    </path>
+                                    <path
+                                        d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                                    </path>
+                                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                                </svg>
+                                <h3>1. Primeros Pasos</h3>
+                            </div>
+                            <div class="manual-body">
+                                <p>KIP App es una herramienta educativa diseñada para enseñar conceptos básicos de
+                                    programación de manera interactiva y divertida. Al abrir la aplicación por primera
+                                    vez, verás una pantalla de bienvenida con el logo de KIP App.</p>
+                                <div class="requirements-box">
+                                    <h4>Requisitos del Sistema:</h4>
+                                    <ul>
+                                        <li>• Conexión a internet para el registro inicial</li>
+                                        <li>• Resolución mínima de pantalla: 1024x768</li>
+                                        <li>• Altavoces o auriculares (opcional)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Registration -->
+                    <div id="registro" class="manual-section-content">
+                        <div class="manual-card">
+                            <div class="manual-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <h3>2. Registro e Inicio de Sesión</h3>
+                            </div>
+                            <div class="manual-body">
+                                <div class="manual-subsection">
+                                    <h4>Crear una Cuenta Nueva:</h4>
+                                    <ol>
+                                        <li>Haz clic en la pestaña "REGISTRO"</li>
+                                        <li>Ingresa un nombre de usuario único</li>
+                                        <li>Proporciona tu correo electrónico</li>
+                                        <li>Crea una contraseña segura</li>
+                                        <li>Haz clic en "Registrarse"</li>
+                                    </ol>
+                                </div>
+                                <div class="manual-subsection">
+                                    <h4>Iniciar Sesión:</h4>
+                                    <ol>
+                                        <li>Selecciona la pestaña "INICIAR SESIÓN"</li>
+                                        <li>Ingresa tu nombre de usuario o correo</li>
+                                        <li>Escribe tu contraseña</li>
+                                        <li>Haz clic en "Ingresar"</li>
+                                    </ol>
+                                </div>
+                                <div class="warning-box">
+                                    <p><strong>Recuperación de Contraseña:</strong> Si olvidas tu contraseña, haz clic
+                                        en "¿Olvidaste tu contraseña?" e ingresa tu correo para recibir un código de
+                                        recuperación.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div id="navegacion" class="manual-section-content">
+                        <div class="manual-card">
+                            <div class="manual-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg>
+                                <h3>3. Navegación Principal</h3>
+                            </div>
+                            <div class="manual-body">
+                                <p>Una vez dentro de la aplicación, encontrarás varios apartados en el menú lateral
+                                    izquierdo:</p>
+                                <div class="navigation-grid">
+                                    <div class="nav-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                                            </path>
+                                            <path
+                                                d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                                            </path>
+                                        </svg>
+                                        <span>Planetas</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12,6 12,12 16,14"></polyline>
+                                        </svg>
+                                        <span>Misiones</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                                        </svg>
+                                        <span>Juegos</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                        </svg>
+                                        <span>Tienda</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                        </svg>
+                                        <span>Glosario</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                        </svg>
+                                        <span>Perfil</span>
+                                    </div>
+                                </div>
+                                <div class="info-box">
+                                    <h4>Barra Superior:</h4>
+                                    <p>En la parte superior encontrarás tu barra de progreso, cantidad de tokens, KIP
+                                        Coins y tu avatar de perfil.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other manual sections would go here -->
+                    <div id="planetas" class="manual-section-content">
+                        <div class="manual-card">
+                            <div class="manual-header">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                                    </path>
+                                    <path
+                                        d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                                    </path>
+                                </svg>
+                                <h3>4. Planetas de Aprendizaje</h3>
+                            </div>
+                            <div class="manual-body">
+                                <p>Los planetas son el corazón del aprendizaje en KIP App. Cada planeta representa un
+                                    tema diferente de programación:</p>
+                                <div class="planets-list">
+                                    <div class="planet-item">
+                                        <h4>Variables y Operadores</h4>
+                                        <p>Aprende los conceptos básicos de variables y operadores matemáticos.</p>
+                                    </div>
+                                    <div class="planet-item">
+                                        <h4>Estructuras de Control</h4>
+                                        <p>Domina los condicionales y bucles para controlar el flujo de tu programa.</p>
+                                    </div>
+                                    <div class="planet-item">
+                                        <h4>Funciones</h4>
+                                        <p>Aprende a crear y utilizar funciones para organizar tu código.</p>
+                                    </div>
+                                </div>
+                                <div class="tip-box">
+                                    <p><strong>Tip:</strong> Los planetas se desbloquean progresivamente. Completa todos
+                                        los niveles de un planeta para acceder al siguiente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Manual -->
+                    <div class="manual-download">
+                        <div class="download-manual-card">
+                            <h3>Manual Completo</h3>
+                            <p>¿Necesitas el manual completo? Descarga la versión PDF con todas las instrucciones
+                                detalladas.</p>
+                            <button onclick="downloadManual()" class="btn btn-primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Descargar Manual PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="nav-logo">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16,18 22,12 16,6"></polyline>
+                                <polyline points="8,6 2,12 8,18"></polyline>
+                            </svg>
+                        </div>
+                        <span class="nav-title">KIP.app</span>
+                    </div>
+                    <p class="footer-description">
+                        Herramienta educativa para el aprendizaje de programación básica, diseñada especialmente para
+                        estudiantes del sector rural.
+                    </p>
+                    <div class="footer-copyright">
+                        <p>© 2025 KIP App. Todos los derechos reservados.</p>
+                        <p>Desarrollado por Aprendices SENA - Ficha 2825962</p>
+                        <p>Agradecimientos especiales a:
+                            <br>- Maria constanza <br>- Mario velazco <br>- instructores SENA,
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><button onclick="scrollToSection('inicio')">Inicio</button></li>
+                        <li><button onclick="scrollToSection('sobre-nosotros')">Sobre Nosotros</button></li>
+                        <li><button onclick="scrollToSection('descargas')">Descargas</button></li>
+                        <li><button onclick="scrollToSection('manual')">Manual de Usuario</button></li>
+                    </ul>
+                </div>
+
+                <div class="footer-support">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Reportar Problema</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-separator"></div>
+
+            <div class="footer-bottom">
+                <p>Servicio Nacional de Aprendizaje - SENA | Centro de Formación para el Desarrollo Rural y Minero</p>
+                <p>Cúcuta, Norte de Santander - Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
