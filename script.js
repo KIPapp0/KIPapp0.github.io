@@ -79,9 +79,9 @@ function showManualSection(sectionId) {
 const downloadConfig = {
   desktop: {
     windows: {
-      url: "https://www.mediafire.com/file/7lf5sfeuf31p18v/kipapp-1.0.0-setup.exe/file",
-      directUrl: "https://download1320.mediafire.com/7lf5sfeuf31p18v/kipapp-1.0.0-setup.exe", // URL directa si la tienes
-      filename: "kipapp-1.0.0-setup.exe",
+      url: "https://www.mediafire.com/file/kmr0gwmsrzwofix/kipapp-1.0.1-setup.exe/file",
+      directUrl: "https://www.mediafire.com/file/kmr0gwmsrzwofix/kipapp-1.0.1-setup.exe/file", // URL directa si la tienes
+      filename: "kipapp-1.0.1-setup.exe",
       size: "90 MB",
       external: true, // Indica que es un enlace externo
     },
@@ -90,7 +90,7 @@ const downloadConfig = {
       filename: "KIP-App-macOS-v1.0.0.dmg",
       size: "52.1 MB",
     },
-    linux: {
+    linux: { 
       url: "downloads/KIP-App-Linux-v1.0.0.AppImage",
       filename: "KIP-App-Linux-v1.0.0.AppImage",
       size: "48.7 MB",
